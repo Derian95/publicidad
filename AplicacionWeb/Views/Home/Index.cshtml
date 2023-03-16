@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                Configuracion
+            </div>
+            <div class="card-body">
+                <button class="btn btn-success" id="btnNew">Agregar Nuevo</button>
+                <hr />
+
+                <table class="table table-striped " id="tbImagenVideo">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Imagen</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Inicio Modal-->
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle Contacto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtIdData" value="0" />
+                <div class="mb-2">
+                    <label>Titulo</label>
+                    <input type="text" class="form-control" id="txtTitle" />
+                </div>
+                <div class="mb-2">
+                    <label>Descripcion</label>
+                    <textarea type="text" class="form-control" id="txtDescription" />
+                </div>
+                <div class="mb-2">
+                    <label>Imagen</label>
+                    <input type="file" class="form-control" id="inputImage" />
+                </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin Modal-->
+
+                @section Scripts{
+                    <script>
+                        const ModelBase={
+                            idImagenVideo=0,
+                            titulo:"",
+                            descripcion: "",
+                            ubicacion: "",
+                            estado:1;
+                        }
+
+                        const showModal(model){
+                            $("#txtIdData").val(modelo.idImagenVideo);
+                            $("#txtTitle").val(modelo.titulo);
+                            $("#txtDescription").val(modelo.descripcion);
+                            $("#inputImage").val(modelo.ubicacion);
+
+                            $(".modal").modal("show");
+                        }
+
+                        $("#btnNew").click(()=>{
+                            showModal
+                        })
+                    </script>
+                }

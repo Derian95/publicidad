@@ -1,0 +1,160 @@
+﻿body {
+    position: relative;
+    height: 100%;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+
+}
+
+.x, .y {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.y {
+    left: 70px;
+}
+
+img, video{
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.text-container{
+    z-index:1;
+    color: white;
+    top:20px;
+    left:20px;
+    position:absolute;
+    text-align:left;
+}
+.text-container h1{
+    font-size:70px;
+}
+.text-container p {
+        font-size: 30px;
+}
+
+@keyframes textAnimation{
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.mySwiper .swiper-wrapper .swiper-slide-active .text-container {
+    animation-name: textAnimation;
+    animation-duration: 1.5s;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+}
+
+/*BUTTON SLIDERS*/
+.container-buttons {
+    position: absolute;
+    height: auto;
+    width: 170px;
+    position: absolute;
+    bottom: 7%;
+    right: 4%;
+}
+.swiper-button-next {
+    color: white;
+    background-color: #893232;
+}
+
+.swiper-button-prev {
+    color: white;
+    background-color: #893232;
+}
+
+/*BUTTON SCRREN*/
+#fullscreen {
+    position: absolute;
+    z-index: 10;
+    bottom: -21px;
+    right: 0;
+    background-color: #893232;
+    border: none;
+    padding: 11px;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    width: 44px;
+    border-radius: 2px;
+}
+#fullscreen:hover{
+    background:#e8e6e646;
+}
+.imgIcon{
+    width:22px;
+    height:22px;
+    position:relative;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 30px !important;
+}
+/*PAGINATION*/
+.swiper-pagination {
+    color: white;
+    position: absolute;
+    left: -70px;
+    bottom: -18px;
+    width: auto;
+    font-size: 25px;
+    /*color: #893232;*/
+    color: white;
+    font-weight: 400;
+}
+
+
+/*/*/
+
+.cont-pagina{
+    position:absolute;
+    bottom:50px;
+    z-index:50;
+}
+
+.pagina{
+    height:2px;
+    border-radius:100%;
+    width:20px;
+}

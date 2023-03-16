@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutSlider.cshtml";
+}
+
+
+<div style="width:100vw; height:100vh; background-color:black;position:relative;">
+    
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-slide-type="img">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+
+                </div>
+                <img src='https://images.pexels.com/photos/269630/pexels-photo-269630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' style="width:100vw;position:absolute;">
+
+            </div>
+            <div class="swiper-slide" data-slide-type="img">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+                </div>
+                <img src="https://images.pexels.com/photos/1871508/pexels-photo-1871508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </div>
+            <div class="swiper-slide" data-slide-type="img">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+                </div>
+                <img src="https://images.pexels.com/photos/3279685/pexels-photo-3279685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </div>
+            <div class="swiper-slide" data-slide-type="vdo">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+                </div>
+                <video id="my-player"
+                       class="video-js"
+                       controls
+                       preload="auto"
+                       poster="//vjs.zencdn.net/v/oceans.png"
+                       data-setup='{}'>
+                    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+                    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+                    <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank">
+                            supports HTML5 video
+                        </a>
+                    </p>
+                </video>
+            </div>
+            <div class="swiper-slide" data-slide-type="img">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+                </div>
+                <img src="https://images.pexels.com/photos/2631067/pexels-photo-2631067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            </div>
+            <div class="swiper-slide" data-slide-type="img">
+                 <div class="text-container">
+                    <h1>SOLO NOSOTROS</h1>
+                    <p>Tenemos los mejores juegos</p>
+                </div>
+            <img src="~/images/imagen1.jpg"  class="img"/>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="container-buttons">
+
+            <div>
+                <div class="swiper-button-next" style="right: 60px;
+                    width: 44px;
+                    border-radius: 2px;
+                    padding: 15px;"></div>
+                <div class="swiper-button-prev" style=" width: 44px;
+                    border-radius: 2px;
+                    padding: 15px;"></div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+            <button id="fullscreen"> <img src="~/images/screen.svg" class="imgIcon" /></button>
+
+        </div>
+        
+        <div class="cont-pagina">
+            <div class="pagina"></div>
+            <div class="pagina"></div>
+            <div class="pagina"></div>
+        </div>
+
+
+
+    </div>
+<div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+      </div>
+    </div>
+  </div>
+
+</div>
+ @section Scripts{
+ <script>
+    const fullscreenButton = document.querySelector('#fullscreen');
+
+    
+fullscreenButton.addEventListener('click', () => {
+  const element = document.documentElement;
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+});
+     var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },effect: 'fade',
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+
+
+
+      
+ </script>
+ 
+ }
